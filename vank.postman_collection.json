@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "e0439405-ecfc-4960-b5b1-202c44b3fa06",
+		"name": "vank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/vank-api/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"vank-api",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer\":{\n        \"companyName\":\"example name\",\n        \"internalCode\": \"45k46l4k5645\",\n        \"taxId\":\"sdfgsdfg\",\n        \"currency\":\"USD\",\n        \"requestsLimit\":100,\n        \"bancks\":[1,2,3,4]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/vank-api/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"vank-api",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer\":{\n        \"_id\":\"6151250598f928bb26318e4d\",\n        \"taxId\":\"sdfgsdfgccccccc\",\n        \"currency\":\"USD\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/vank-api/customers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"vank-api",
+						"customers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invoice fetch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"filter\":{\n        \"vendor\":\"122\",\n        \"invoice_date\":\"2014-04-24\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/vank-api/invoices/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"vank-api",
+						"invoices",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

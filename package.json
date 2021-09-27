@@ -1,0 +1,39 @@
+{
+  "name": "vank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "DEBUG=app:* nodemon index.js | pino-pretty -l"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "@koa/router": "^10.1.1",
+    "@types/jest": "^27.0.2",
+    "babel-jest": "^27.2.2",
+    "esm": "^3.2.25",
+    "jest": "^27.2.2",
+    "koa": "^2.13.3",
+    "koa-bodyparser": "^4.3.0",
+    "koa-logger": "^3.2.1",
+    "mongoose": "^6.0.7",
+    "nodemon": "^2.0.13",
+    "pino": "^6.13.3",
+    "pino-pretty": "^7.0.1",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
+    ]
+  }
+}
